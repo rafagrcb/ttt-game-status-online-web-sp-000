@@ -56,9 +56,7 @@ def over?(board)
 end
 
 def winner(board)
-  if x_win = ["X", " ", " ", " ", "X", " ", " ", " ", "X"]
-    return "X"
-  else o_win = ["X", "O", " ", " ", "O", " ", " ", "O", "X"]
-    return "O"
+  if won?(board)
+    return board[won?(board)[0]]
   end
 end
